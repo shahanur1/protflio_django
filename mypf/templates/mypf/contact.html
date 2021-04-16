@@ -1,0 +1,61 @@
+{% extends 'mypf/base.html' %}
+<!--extended the base html file-->
+
+<!--adding content-->
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mx-auto">
+            <!--Contact Form-->
+            <form class="margin" action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="userinput" class="col-2 col form-label"style="color:black"><b>Name</b></label>
+                    <div class="col-10">
+                        <input name="user" type="text" class="form-control" id="userinput" placeholder="Enter Your Name ">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="numberinput" class="col-2 col form-label"style="color:black"><b>Number</b></label>
+                    <div class="col-10">
+                        <input name="number" type="text" class="form-control" id="numberinput" placeholder="Enter Your Phone Number">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="emailinput" class="col-2 col form-label"style="color:black"><b>Email</b></label>
+                    <div class="col-10">
+                        <input name="email" type="email" class="form-control" id="emailinput" placeholder="name@example.com">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="subjectinput" class="col-2 col form-label"style="color:black"><b>Subject</b></label>
+                    <div class="col-10">
+                        <input name="subject" type="text" class="form-control" id="subjectinput" placeholder="Enter your Subject">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="messageinput" class="col-2 col form-label"style="color:black"><b>Message</b></label>
+                    <div class="col-10">
+                        <textarea name="message" class="form-control" id="messageinput" placeholder="Enter your Message"></textarea>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    
+                    <button onclick="sweet();" class="btn btn-primary float-right btn-md send-button">Send</button>
+                    <script>    
+                        function sweet(){
+                            Swal.fire(
+                                'Thank You for Your message!',
+                                'We will Contact You as soon as possible!',
+                                'success'
+                            )
+                        }
+                    </script> 
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'mypf/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center margin">
+            <div class="col-7">
+            </div>
+        </div>
+    </div>
+
+<!--  ======================= Start Main Area ================================ -->
+    <main class="site-main">
+
+<!--  ======================= Start Banner Area =======================  -->
+        <section class="site-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 site-title">
+                        <h3 class="title-text" style="color:black">Hey</h3>
+                        <h2 class="title-text text-uppercase" style="color:black">I'm Shagor</h2>
+                        <h5 class="title-text text" style="color:blue"> Django And Laravel Developer</h5>
+                    </div>
+                    <div class="col-lg-6 col-md-12 banner-image">
+                        <img src="static/img/banner/banner-image.png" alt="banner-img" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  ======================= End Banner Area =======================  -->
+               
+        <!--  ========================= About Area ==========================  -->
+
+        <section class="about-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image">
+                            <img src="static/img/about-us.png" alt="About us" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 about-title">
+                        <h2 class="text-uppercase pt-5">
+                            <span>Let me</span>
+                            <span>introduce</span>
+                            <span>myself</span>
+                        </h2>
+                        <div class="paragraph py-4 w-75">
+                            <p class="para">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum iure obcaecati vel
+                                possimus officia maiores perferendis ut! Quos, perspiciatis.
+                            </p>
+                            <p class="para">
+                                It is a long established fact that a reader will be distracted by the readable content
+                                of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                                here
+                            </p>
+                        </div>
+                        <div class="row justify-content-center margin">
+                            <div class="pflink">
+                                <a href="{% url 'portfolio' %}">Check Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  ========================= End About Area ==========================  -->
+        <!--  ========================== Subscribe me Area ============================  -->
+        <section class="subscribe-us-area">
+            <div class="container subscribe">
+                <div class="row">
+                    <div class="col-lg-12 text-center subscribe-title">
+                        <h4 class="text-uppercase">Get Update From anywhere</h4>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                            consequuntur.</p>
+                    </div>
+                </div>
+                <div class="d-sm-flex justify-content-center">
+                    <form class="w-50">
+                        <div class="row d-flex flex-row flex-wrap">
+                            <div class="col input-textbox">
+                                <input type="text" id="txtemail" class="form-control" placeholder="name@example.com">
+                            </div>
+                            <div class="col">
+                                <div class="btn-submit">
+                                    <button class="btn btn-success float-right" onclick="sweet();">Subscribe Hear</button>
+                                    <script>    
+                                        function sweet(){
+                                            Swal.fire(
+                                                'Thanks!',
+                                                'You are Subscribe!',
+                                                'success'
+                                            )
+                                        }
+                                    </script>    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--  ========================== End Subscribe me Area ============================  -->
+
+
+    </main>
+    <!--  ======================= End Main Area ================================ -->
+
+
+
+
+
+{% endblock %}

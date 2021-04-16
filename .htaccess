@@ -1,0 +1,10 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/tigexghu/shaju_dev/shagor22"
+PassengerBaseURI "/"
+PassengerPython "/home/tigexghu/virtualenv/shaju_dev/shagor22/3.7/bin/python3.7"
+PassengerAppLogFile "/home/tigexghu/logs/passengar.log)"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
